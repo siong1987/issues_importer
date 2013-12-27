@@ -2,7 +2,7 @@
 
 This is an issues importer that will import issues from Bitbucket to Github.
 Currently, it only imports issues with `open`, `new`, and `on hold`
-status from Bitbucket.  The issues that are created on Github will be
+status from Bitbucket.  The issues that are imported to Github will be
 labeled `bitbucket`.
 
 ## Usage
