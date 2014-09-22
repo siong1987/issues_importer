@@ -8,11 +8,13 @@ labeled `bitbucket`.
 ## Usage
 
 First, you need to provide the necessary credentials in the importer.rb
-file.
+file.  Also, make sure that you have `bundler` installed.
 
 Then:
 
 ```
+git clone https://github.com/siong1987/issues_importer.git
+cd issues_importer
 bundle install
 ruby importer.rb
 ```
