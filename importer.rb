@@ -5,6 +5,7 @@ Bundler.require(:default)
 # Modify your credentials here
 BITBUCKET_USERNAME = "siong1987"
 BITBUCKET_PASSWORD = "password"
+BITBUCKET_REPOUSER = BITBUCKET_USERNAME
 BITBUCKET_REPONAME = "reponame"
 
 GITHUB_USERNAME = "siong1987"
@@ -20,7 +21,7 @@ def extract_issues(status)
   start = 0
 
   loop do
-    issues = BITBUCKET.issues.list_repo BITBUCKET_USERNAME, BITBUCKET_REPONAME, limit: 50, start: start, sort: :created_on, status: status
+    issues = BITBUCKET.issues.list_repo BITBUCKET_REPOUSER, BITBUCKET_REPONAME, limit: 50, start: start, sort: :created_on, status: status
     break if issues.count == 0
 
     result += issues
